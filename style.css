@@ -2,13 +2,71 @@ body {
   background: #d1cdcd;
 }
 
-#navbar-topic-name {
+#nav-bar {
+  background-color: #2b2c36;
+}
+
+#nav-bar-text {
   color: white;
 }
 
 #nav-search-bar {
   width: 290px;
   border-radius: 20px;
+}
+
+#footer-placeholder {
+  background-color: #2b2c36;
+  bottom: 0%;
+}
+
+#footer-about-me {
+  color: white;
+}
+
+#github-link {
+  background-image: url("github-mark.png");
+}
+
+/* #collapsible-contents-button {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0rem;
+  right: 2rem;
+  bottom: 1rem;
+  bottom: 5%;
+  right: 6.7%;
+} */
+
+#collapsible-contents-button {
+  position: fixed;
+  bottom: 5%;
+  right: 6.7%;
+}
+
+#collapse1 {
+  background-color: #f0ede6;
+  width: 112%;
+  border-style: solid;
+  border-radius: 20px;
+  margin-bottom: 5%;
+  box-shadow: 3px 3px 5px;
+}
+
+#p-collapsible-table-of-contents {
+  font-size: 15px;
+  white-space: pre;
+}
+
+#div-information {
+  background-color: white;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-left: 5%; 
+  margin-right: 5%;
+  margin-bottom: 10%; 
 }
 
 /* #find-button {
@@ -25,6 +83,19 @@ h4 {
   color: grey;
   margin-bottom: 7%;
   text-align: center;
+}
+
+#about-hr {
+    background-color: grey;
+}
+
+#side-bar-about {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-left: 65%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 #category-header {
@@ -52,21 +123,10 @@ h4 {
   margin-bottom: 4%;
 }
 
-.div-information {
-  background: white;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 15%;
-  padding-right: 15%;
-  margin-left: 5%; 
-  margin-right: 5%;
-  margin-bottom: 10%; 
-}
-
 #psuedo-code {
   white-space: pre;
   font-family: 'Courier New', Courier, monospace;
-  background: #e3e0da;
+  background-color: #e3e0da;
   border-radius: 25px;
   margin: 5%;
 }

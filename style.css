@@ -50,7 +50,7 @@ body {
   border-style: solid;
   border-radius: 20px;
   margin-bottom: 5%;
-  box-shadow: 3px 3px 5px;
+  box-shadow: 2px 2px 3px;
 }
 
 #p-collapsible-table-of-contents {
@@ -86,16 +86,16 @@ h4 {
 }
 
 #about-hr {
-    background-color: grey;
+  background-color: white;
 }
 
 #side-bar-about {
-    background-color: black;
-    color: white;
-    text-align: center;
-    margin-left: 65%;
-    padding-left: 5%;
-    padding-right: 5%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-left: 65%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #category-header {
@@ -125,6 +125,7 @@ h4 {
 
 #psuedo-code {
   white-space: pre;
+  word-break: break-all;
   font-family: 'Courier New', Courier, monospace;
   background-color: #e3e0da;
   border-radius: 25px;

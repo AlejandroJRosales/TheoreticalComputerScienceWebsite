@@ -2,40 +2,39 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	 crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
-	</script>
+  <!-- Get Style Sheets and JS from Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+  <!-- For math formulas -->
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 	</script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-	</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<link rel="stylesheet" href="style.css">
 
-  <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Algorithmic Analysis - Theoretical Computer Science</title>
 </head>
 
 <body>
-	<script src="script.js">
-
-	</script>
+	<script src="script.js"></script>
 
 	<!--Navigation bar-->
 	<div class="nav-placeholder" id="nav-placeholder"></div>
 	<!--end of Navigation bar-->
 
-	<div class="div-information">
+	<div class="information">
 		<h1>Algorithmic Analysis</h1>
-		<h4>College Level Crash Course</h4>
-
-		<p class="needed-section">**It is recommended that before you continue you are familiar with a little bit of pseudo-code and
-			have a good understanding of math notaton. Specifically set notation.</p>
+		<h4>From Intro To College Level Crash Course</h4>
+    <span class="dot"></span><p><i>Still Adding To This</i></p>
 
     <br>
     <br>
@@ -43,8 +42,40 @@
     <hr>
 
     <h5>Table of Contents</h5>
-    <p class="table-of-contents">
+    <ol class="table-of-contents">
+      <li><a href="#rundown">Rundown</a></li>
+      <ul>
+          <li><a href="#how-to-read">Structure of this Page</a></li>
+          <li><a href="#def-algorithmic-analysis">What is Algorithmic Anaylsis Anyways</a></li>
+      </ul>
+      <li><a href="#complexity-theory">Complexity Theory</a></li>
+      <ul>
+          <li><a href="#best-case-time-complexity">Best-Case Time Complexity - \(\Omega\)</a></li>
+          <ul>
+                  <li><a href="#best-case-equation">Best-Case Time Complexity Equation</a></li>
+          </ul>
+          <li>Worst-Case Time Complexity - \(O\)</li>
+          <li>Average-Case Time Complexity - \(\Theta\)</li>
+      </ul>
+      <li>Key Properties of Asymptotic Operations</li>
+      <ul>
+          <li>Reflextivity</li>
+          <li>Constants</li>
+          <li>Transitivity</li>
+          <li>Products</li>
+          <li>Sum of Functions</li>
+      </ul>
+      <li>Run Time Analysis</li>
+      <li>Proofs</li>
+      <ul>
+          <li>Proof By Contradiction</li>
+          <li>Limits Relationship Proof</li>
+      </ul>
+    </ol>
+    <!-- <p class="table-of-contents">
       <a href="#rundown">Rundown</a>
+          <a href="#how-to-read">Structure of this Page</a>
+          <a href="#def-algorithmic-analysis">What is Algorithmic Anaylsis Anyways</a>
       <a href="#complexity-theory">Complexity Theory</a>
           <a href="#best-case-time-complexity">Best-Case Time Complexity - \(\Omega\)</a>
                   <a href="#best-case-equation">Best-Case Time Complexity Equation</a>
@@ -60,7 +91,7 @@
       Proofs 
           Proof By Contradiction
           Limits Relationship Proof
-    </p>
+    </p> -->
 
     <!-- <p id="table-of-contents"><b>Contents
             Rundown 
@@ -70,11 +101,19 @@
     <hr>
 
     <div class="rundown" id="rundown">
-      
       <p class="category-header">Rundown</p>
-      <p>This page is broken into mutiple sections. First, there are the catagories given in the contents above. Then there are subsections of those catagories. The flow of the subsections stemming from the respective category increases in difficulty and understanding. You do not have to read the whole thing to get a basic undestanding of the catageory. Reading the first subsection will give you the basic understanding, then the succesor subsections are for a more in depth analysis into that category.</p>
+      <p class="section-header" id="how-to-read">Structure of this Page</p>
+      <p class="how-to-read">This page is broken into mutiple sections. The sections are given in the contents above. There are subsections of those sections. Understanding the depth of analysis of each section can be determined by the following "algorithm":
+        
+        (A) Beggining of Section &lt;- Intro
+        (B) Subsection of A &lt;- Continuation of A so more in depth
+        (C) Subsection of B &lt;- Continuation of B so more in depth
+        ... 
+        (A\(_{n}\)) Subsection of A\(_{n-1}\) &lt;- Continuation of A\(_{n-1}\) and most in depth
+      </p>
+      <p class="section-header" id="def-algorithmic-analysis">What is Algorithmic Anaylsis Anyways</p>
       <p>We will be learning about algorithmic analysis. Algorithmic analysis can be defined as the process of finding the computational complexity of algorithms both in time, storage, or other resources needed to execute them. For now we are first going to take a look at the time complexity aspect of an algorithm. There is a relationship associated with this, generally between the length of the input for the algorithm and the resouces used by the algorithm. Now, of course the resouces needed for the algorithm can vary depending on the input size and type. Most obviously, the greater the size of the input the greater the amount of resouces needed. What can be less obvious is the effect the input <i>type</i> has on the resources required. This type can include data type of the varaibles of input structure. Lets take an example of this. Lets look at insertion sort. Insertion sort can be defined by the following psudeo-code.</p>
-      <p class="psuedo-code">
+      <p class="code">
       algorithm Insertion Sort(List L)
           i = 0
           <b>while</b> i &lt; length(L)
@@ -104,7 +143,9 @@
         
           <p>Mathematically, it is described by the following equation:</p>
 
-          <h5 class="math-notation">$$\Omega(g(n)) = \exists \, c > 0, n_{0} > 0\; s.t. \; 0 \leq cg(n) \leq f(n) \;\;\; \forall \, n \geq n _{0}$$</h5>
+          <h5 class="math-notation">$$\Omega(g(n)) = \exists \, c > 0, n_{0} > 0$$</h5>
+          <h5 class="math-notation">$$s.t. \; 0 \leq cg(n) \leq f(n)$$</h5>
+          <h5 class="math-notation">$$\forall \, n \geq n _{0}$$</h5>
 
           <p>Lets break this down just in case you're not too familiar with the notation. Some of this is axiomatic, but I'll explain nevertheless. I will break this down into individual parts, then piece them together to arrive at the final equation. First, lets start with what's left of the equal sign.</p>
 
@@ -120,19 +161,21 @@
 
           <p>Then there is \(0 \leq cg(n) \leq f(n)\). This means that \(cg(n)\) lies between \(0\) and \(f(n)\). In this instance, \(f(n)\) is the original asymptotic function, the one that is derived from the algorithm itself. \(cg(n)\) denotes the lower-bounds of our original asymptotic function. Thus, this is saying that the lower-bounds of the original asymptotic function for our algorithm lies at or below the original asymptotic function or at or above \(0\).</p>
 
-          <h5 class="math-notation">$$\exists \, c, n_{0} \; s.t. \; 0 \leq cg(n) \leq f(n)$$</h5>
+          <h5 class="math-notation">$$\exists \, c > 0, n_{0} > 0$$</h5>
+          <h5 class="math-notation">$$s.t. \; 0 \leq cg(n) \leq f(n)$$</h5>
 
           <p>Now, to concatenate the last two parts together. This segment of the equation is saying that there exists two constants \(c\) and \(n_{0}\) such that our lower-bounds of the original asymptotic function \(cg(n)\) lies at or below the original asymptotic function \(f(n)\) or at or above \(0\).</p>
           
           <p>So putting it all together and we have the equation: </p>
-          <h5 class="math-notation">$$\Omega(g(n)) = \exists \, c > 0, n_{0} > 0\; s.t. \; 0 \leq cg(n) \leq f(n) \;\;\; \forall \, n \geq n _{0}$$</h5>
+          <h5 class="math-notation">$$\Omega(g(n)) = \exists \, c > 0, n_{0} > 0$$</h5>
+          <h5 class="math-notation">$$s.t. \; 0 \leq cg(n) \leq f(n)$$</h5>
+          <h5 class="math-notation">$$\forall \, n \geq n _{0}$$</h5>
           <p>From what we have learned we can say that this equation here says that there exists a constant \(c\) and \(n\), \(c\) being runtime constants, that are greater than 0 such that our lower-bound exists between 0 and the original asymptotic function.</p>
 
           <!-- go on to explain and pieace together the rest of the equation. Also make sure this whole thing builds off eachother. Meaning, explain what asymptotic means, because the word is used later. And it would not make much sense to have an intro to teach newer people but then expect them to know what asymptotic means. So make sure it builds off eachother. This is going to be a long page, like a CRASH COURSE so yeah. -->
         </div>
       </div>
     </div>    
-    <!-- <h5 id="math-notation">$$\exists c, n_{0} \in |f(n)| \leq c|g(n)| \forall n \geq n _{0}$$</h5> -->
   </div>
 
   <div class="collapsible-contents-button">
@@ -140,27 +183,45 @@
       <div class="panel panel-default">
         <div class="panel-collapse collapse" id="collapse">
           <p class="p-collapsible-table-of-contents">
-            <a href="#nav-placeholder">Top of the Page</a>
-            <a href="#rundown">Rundown</a>
-            <a href="#complexity-theory">Complexity Theory</a>
-                <a href="#best-case-time-complexity">Best-Case Time Complexity - \(\Omega\)</a>
-                        <a href="#best-case-equation">Best-Case Time Complexity Equation</a>
-                Worst-Case Time Complexity - \(O\)
-                Average-Case Time Complexity - \(\Theta\)
-            Key Properties of Asymptotic Operations
-                Reflextivity
-                Constants 
-                Transitivity 
-                Products 
-                Sum of Functions
-            Run Time Analysis
-            Proofs 
-                Proof By Contradiction
-                Limits Relationship Proof
-            <a href="#footer-placeholder">Bottom of the Page</a>
+            <ul>
+              <li><a href="#nav-placeholder">Top of the Page</a></li>
+            </ul>
+            <ol>
+              <li><a href="#rundown">Rundown</a></li>
+              <ul>
+                  <li><a href="#how-to-read">Structure of this Page</a></li>
+                  <li><a href="#def-algorithmic-analysis">What is Algorithmic Anaylsis Anyways</a></li>
+              </ul>
+              <li><a href="#complexity-theory">Complexity Theory</a></li>
+              <ul>
+                  <li><a href="#best-case-time-complexity">Best-Case Time Complexity - \(\Omega\)</a></li>
+                  <ul>
+                          <li><a href="#best-case-equation">Best-Case Time Complexity Equation</a></li>
+                  </ul>
+                  <li>Worst-Case Time Complexity - \(O\)</li>
+                  <li>Average-Case Time Complexity - \(\Theta\)</li>
+              </ul>
+              <li>Key Properties of Asymptotic Operations</li>
+              <ul>
+                  <li>Reflextivity</li>
+                  <li>Constants</li>
+                  <li>Transitivity</li>
+                  <li>Products</li>
+                  <li>Sum of Functions</li>
+              </ul>
+              <li>Run Time Analysis</li>
+              <li>Proofs</li>
+              <ul>
+                  <li>Proof By Contradiction</li>
+                  <li>Limits Relationship Proof</li>
+              </ul>
+            </ol>
+            <ul>
+              <li><a href="#footer-placeholder">Bottom of the Page</a></li>
+            </ul>
           </p>
         </div>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapseExample" class="contents-button">
           Table of Contents
         </button>
       </div>

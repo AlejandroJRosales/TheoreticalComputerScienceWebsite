@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+	</script>
+
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+	</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+
+	<link rel="stylesheet" href="style.css">
+
+  <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+
+	<title>Randomized Algorithms - Theoretical Computer Science</title>
+</head>
+
+<body>
+	<script src="script.js">
+
+	</script>
+
+	<!--Navigation bar-->
+	<div class="nav-placeholder" id="nav-placeholder"></div>
+	<!--end of Navigation bar-->
+
+	<div class="div-information">
+		<h1>Randomized Algorithms</h1>
+		<h4>From Intro To College Level Crash Course</h4>
+    <span class="dot"></span><p><i>Still Adding To This</i></p>
+
+    <br>
+    <br>
+
+    <hr>
+
+    <h5>Table of Contents</h5>
+    <p class="table-of-contents">
+      <a href="#rundown">Rundown</a>
+          <a href="#how-to-read">Structure of this Page</a>
+          <a href="#def-randomization-algorithm">What is a Randomized Algorithm</a>
+      <a href="#randomized-algorithms">Randomized Algorithms</a>
+          <a href="#how-can-randomization-help">How Can Randomization Help</a>
+    </p>
+
+    <!-- <p id="table-of-contents"><b>Contents
+            Rundown 
+            Best-Case Time Complexity - \(\Omega\)
+            Worst-Case Time Complexity - \(O\)
+            Average-Case Time Complexity - \(\Theta\)</b> -->
+    <hr>
+
+    <div class="rundown" id="rundown">
+      <p class="category-header">Rundown</p>
+      <p class="section-header" id="how-to-read">Structure of this Page</p>
+      <p class="how-to-read">This page is broken into mutiple sections. The sections are given in the contents above. There are subsections of those sections. Understanding the depth of analysis of each section can be determined by the following "algorithm":
+        
+        (A) Beggining of Section &lt;- Intro
+        (B) Subsection of A &lt;- Continuation of A so more in depth
+        (C) Subsection of B &lt;- Continuation of B so more in depth
+        ... 
+        (A\(_{n}\)) Subsection of A\(_{n-1}\) &lt;- Continuation of A\(_{n-1}\) and most in depth
+      </p>
+      <p class="section-header" id="def-randomization-algorithm">What is a Randomized Algorithm</p>
+      <p></p>
+    </div>
+
+    <div class="randomized-algorithms" id="randomized-algorithms">
+      <p class="category-header">Randomized Algorithms</p>
+      <div class="how-can-randomization-help" id="how-can-randomization-help">
+        <p class="section-header">How Can Randomization Help</p>
+        <p></p>
+      </div>
+    </div>    
+    <!-- <h5 id="math-notation">$$\exists c, n_{0} \in |f(n)| \leq c|g(n)| \forall n \geq n _{0}$$</h5> -->
+  </div>
+
+  <div class="collapsible-contents-button">
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-collapse collapse" id="collapse">
+          <p class="p-collapsible-table-of-contents">
+            <a href="#rundown">Rundown</a>
+                <a href="#how-to-read">Structure of this Page</a>
+                <a href="#def-randomization-algorithm">What is a Randomized Algorithm</a>
+            <a href="#randomized-algorithms">Randomized Algorithms</a>
+                <a href="#how-can-randomization-help">How Can Randomization Help</a>
+            <a href="#footer-placeholder">Bottom of the Page</a>
+          </p>
+        </div>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapseExample" id="contents-button">
+          Table of Contents
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- <a href="#nav-placeholder" id="fixed-to-top-button"><button type="button" class="btn btn-primary">Top of the Page</button></a> -->
+
+  <!-- <a href="#nav-placeholder" id="fixed-to-top-button">Top of the Page</a> -->
+
+  <!--Footer bar-->
+  <div class="footer-placeholder" id="footer-placeholder"></div>
+  <!--end of Footer bar-->
+</body>
+
+</html>
